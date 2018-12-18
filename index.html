@@ -2,10 +2,11 @@
 <html>
 <head><title>Close window</title></head>
 <body>
+	<button onclick="myFunction()">Click to close</button>
 <script>
-window.postMessage('{"event":"closeWebview"}', '*');
-window.close();
+	function myFunction() {
+    	window.postMessage('{"event":"closeWebview"}', '*');
+	}
 </script>
-<h1>Thank you for using the webview, please close this window to return to chat</h1>
 </body>
 </html>
