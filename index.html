@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Close window</title></head>
+<body>
+<script>
+window.postMessage('{"event":"closeWebview"}', '*');
+window.close();
+</script>
+<h1>Thank you for using the webview, please close this window to return to chat</h1>
+</body>
+</html>
