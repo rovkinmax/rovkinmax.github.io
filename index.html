@@ -5,7 +5,18 @@
 	<button onclick="myFunction()">Click to close</button>
 <script>
 	function myFunction() {
-    	window.postMessage('{"event":"closeWebview"}', '*');
+    	window.postMessage(JSON.stringify({
+  event: 'sendToChat',
+  payload: {
+    ssic: {
+      type: 'MESG',
+      message: 'selected codes: 1034, 1035',
+      data: { action: 'submitCodes', parameters: { codes: [12345, 51233] } },
+    },
+  },
+}), '*');
+window.postMessage('{"event": "sendToChat"}', '*')
+window.close();
 	}
 </script>
 </body>
